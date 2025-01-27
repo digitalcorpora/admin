@@ -1,0 +1,46 @@
+CFReDS Portal Tech Inventory
+===========================
+
+Data Storage
+------------
+Google Drive contains the majority of the user's datasets.
+
+q: where are the rest stored?
+q: what is the organization of the drive?
+q: Where are the logs? Are they processed?
+
+Web Server
+----------
+- nginx terminates TLS connections.
+- Incoming requests routed to Flask application
+q: who manages the certificates?
+
+Flask application
+q: where is the source code?
+q: How are updates pushed to the server?
+q: Is there a development server?
+q: Is there a CI/CD system for testing?
+
+Hosted on a single EC2 instance.
+q: Instance size? Utilization?
+q: Who manages it?
+q: Is there failover? 
+q: How is it monitored?
+
+REST API
+- The backend exposes a RESTful API to handle CRUD operations for datasets, taxonomy and tags, and user management.
+- JWT Authentication: JSON Web Tokens (JWT) are used for secure authentication and authorization of users.
+
+MongoDB
+- Database: MongoDB is used to store all application data, including user information, datasets, taxonomy and tags.
+q: where is the MongoDB running?
+q: how is it backed up?
+q: How much data is actually stored in MongoDB?
+
+Frontend
+- VueJS: VueJS is used to build the frontend of the application.
+q: where is it hosted?
+q: CI/CD for the frontend?
+q: What is the testing strategy?
+
+
